@@ -5,16 +5,17 @@ import Spinner from './Spinner';
 
 
 class App extends React.Component {
+    state = { latitude: null, errorMessage: '' }; 
+    // Works the same as below (We can show that by using babel)
+
     // Everytime an instance is created, constructor will be called
     // Not the only method but common in React to initialize Class
-    constructor(props) {
-        super(props);
+    // constructor(props) {
+    //     super(props);
 
-        //This is the ONLY TIME we asign this.state directly
-        this.state = { latitude: null, errorMessage: '' };
-    }
-
-    // state = { latitude: null, errorMessage: '' }; //Works the same as above
+    //     //This is the ONLY TIME we asign this.state directly
+    //     this.state = { latitude: null, errorMessage: '' };
+    // }
 
     componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
